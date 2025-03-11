@@ -6,7 +6,7 @@ import { skillCategories } from '@/data/skillCategories';
 
 const Skills = () => {
   const { ref: titleRef, isVisible: titleVisible } = useScrollAnimation();
-  const { ref: skillsRef, isVisible: skillsVisible } = useScrollAnimation();
+  const { ref: skillsRef, isVisible: skillsVisible } = useScrollAnimation({ threshold: 0.05 });
 
   return (
     <section id="skills" className="section bg-gradient-to-b from-white to-blue-50">
@@ -25,15 +25,23 @@ const Skills = () => {
         </div>
 
         <div 
-          ref={skillsRef} 
-          className={`transition-all duration-700 delay-300 ${skillsVisible ? 'animate-fade-in' : 'opacity-0'}`}
+          ref={skillsRef}
+
+          className="transition-all duration-700"
         >
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {skillCategories.map((category, categoryIndex) => (
-              <SkillCategoryComponent 
+              <div 
                 key={categoryIndex} 
-                category={category}
-              />
+                className="transition-all duration-500"
+                style={{ 
+                  transitionDelay: skillsVisible ? `${categoryIndex * 200}ms` : '0ms',
+                  opacity: skillsVisible ? 1 : 0,
+                  transform: skillsVisible ? 'translateY(0)' : 'translateY(30px)'
+                }}
+              >
+                <SkillCategoryComponent category={category} />
+              </div>
             ))}
           </div>
         </div>

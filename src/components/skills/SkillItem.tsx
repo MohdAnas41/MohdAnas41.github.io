@@ -20,9 +20,10 @@ export const SkillItem: React.FC<SkillItemProps> = ({ skill }) => {
       <div className="w-24 bg-gray-200 rounded-full h-2 overflow-hidden">
         <div 
           ref={ref}
-          className={`bg-primary rounded-full h-2 transition-all duration-1000 ease-out ${isVisible ? '' : 'w-0'}`}
+          className={`bg-primary rounded-full h-2 transition-all duration-1000 ease-out ${isVisible ? 'animate-pulse' : 'w-0'}`}
           style={{ 
-            width: isVisible ? `${(skill.level || 5) * 10}%` : '0%'
+            width: isVisible ? `${(skill.level || 5) * 10}%` : '0%',
+            boxShadow: isVisible ? '0 0 8px hsl(var(--primary))' : 'none'
           }}
         ></div>
       </div>
