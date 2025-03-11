@@ -1,6 +1,6 @@
 
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { Code, Database, FileCode, Brain, Activity, Server, ChartBar, ChartPie, ChartLine, GitBranch, Docker, Cloud } from 'lucide-react';
+import { Code, Database, FileCode, Brain, Activity, Server, ChartBar, ChartPie, ChartLine, GitBranch, Cloud } from 'lucide-react';
 import { SkillCategory } from "@/lib/types";
 
 const Skills = () => {
@@ -89,7 +89,7 @@ const Skills = () => {
       // Tools
       case 'jupyter': return <Code className="w-6 h-6 text-primary" />;
       case 'git': return <GitBranch className="w-6 h-6 text-primary" />;
-      case 'docker': return <Docker className="w-6 h-6 text-primary" />;
+      case 'docker': return <DockerIcon className="w-6 h-6 text-primary" />;
       case 'aws': return <Cloud className="w-6 h-6 text-primary" />;
       
       default: return <Code className="w-6 h-6 text-primary" />;
@@ -228,6 +228,31 @@ const Split = (props: any) => (
     <path d="M8 3H3v5" />
     <path d="M21 11.5V21H3V11.5" />
     <path d="m21 3-9 9-9-9" />
+  </svg>
+);
+
+// Create a custom Docker icon
+const DockerIcon = (props: any) => (
+  <svg
+    {...props}
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M3 5h18v14H3V5z" />
+    <path d="M21 9H3" />
+    <rect x="6" y="12" width="3" height="3" />
+    <rect x="11" y="12" width="3" height="3" />
+    <rect x="16" y="12" width="3" height="3" />
+    <rect x="6" y="17" width="3" height="3" />
+    <rect x="11" y="17" width="3" height="3" />
+    <rect x="16" y="17" width="3" height="3" />
   </svg>
 );
 
