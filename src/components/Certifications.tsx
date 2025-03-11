@@ -10,45 +10,45 @@ const Certifications = () => {
   const certifications: Certification[] = [
     {
       id: 1,
-      name: "IBM Data Science Professional Certificate",
-      issuer: "IBM via Coursera",
-      date: "April 2023",
-      link: "https://www.coursera.org/professional-certificates/ibm-data-science"
+      name: "Applied DS Lab by WQU",
+      issuer: "WorldQuant University",
+      date: "Currently enrolled (Nov 2024)",
+      link: "https://www.wqu.edu/programs/applied-ds-lab/"
     },
     {
       id: 2,
-      name: "Google Data Analytics Certificate",
-      issuer: "Google via Coursera",
-      date: "January 2023",
-      link: "https://www.coursera.org/professional-certificates/google-data-analytics"
+      name: "BCG - Data Science Job Simulation",
+      issuer: "BCG",
+      date: "January 2025",
+      link: "https://www.theforage.com/virtual-internships/ThbphD5N5WRsd9Mxo"
     },
     {
       id: 3,
-      name: "Machine Learning",
-      issuer: "Stanford University via Coursera (Andrew Ng)",
-      date: "November 2022",
-      link: "https://www.coursera.org/learn/machine-learning"
+      name: "Machine Learning in Python",
+      issuer: "365 Data Science",
+      date: "November 2024",
+      link: "https://365datascience.com/courses/machine-learning-in-python/"
     },
     {
       id: 4,
-      name: "Deep Learning Specialization",
-      issuer: "DeepLearning.AI",
-      date: "June 2023",
-      link: "https://www.coursera.org/specializations/deep-learning"
+      name: "Introduction to Data Science",
+      issuer: "Cisco Networking Academy",
+      date: "June 2024",
+      link: "https://www.netacad.com/courses/programming/introduction-data-science"
     },
     {
       id: 5,
-      name: "SQL for Data Science",
-      issuer: "University of California, Davis via Coursera",
-      date: "September 2022",
-      link: "https://www.coursera.org/learn/sql-for-data-science"
+      name: "Data Visualization with PowerBI",
+      issuer: "Great Learning",
+      date: "May 2024",
+      link: "https://www.greatlearning.in/academy/learn-for-free/courses/data-visualization-with-power-bi"
     },
     {
       id: 6,
-      name: "Data Visualization with Tableau",
-      issuer: "UC Davis via Coursera",
-      date: "March 2023",
-      link: "https://www.coursera.org/specializations/data-visualization"
+      name: "SQL for Data Science",
+      issuer: "Simplilearn",
+      date: "Currently enrolled",
+      link: "https://www.simplilearn.com/learn-sql-basics-skillup"
     }
   ];
 

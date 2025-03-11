@@ -14,7 +14,8 @@ const Blog = () => {
       summary: "A step-by-step walkthrough of building my first ML model, from data collection to deployment, with lessons learned along the way.",
       date: "April 15, 2023",
       readTime: "8 min read",
-      link: "#"
+      link: "https://medium.com/@wayanas497/how-i-built-my-first-machine-learning-model-predicting-car-purchase-prices-9ebcbd4c6c25",
+      image: "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*vaTUCd-4jVg9RQl52z6WJQ.jpeg"
     },
     {
       id: 2,
@@ -22,7 +23,8 @@ const Blog = () => {
       summary: "An exploration of the pitfalls that new data analysts often encounter and how to avoid them in your analysis workflow.",
       date: "June 22, 2023",
       readTime: "6 min read",
-      link: "#"
+      link: "#",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80"
     },
     {
       id: 3,
@@ -30,7 +32,8 @@ const Blog = () => {
       summary: "Why feature engineering is crucial for model performance and techniques I've found effective in my projects.",
       date: "August 10, 2023",
       readTime: "10 min read",
-      link: "#"
+      link: "#",
+      image: "https://images.unsplash.com/photo-1516110833967-0b5716ca1387?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80"
     }
   ];
 
@@ -59,6 +62,14 @@ const Blog = () => {
               key={post.id} 
               className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 group"
             >
+              <div className="h-48 overflow-hidden relative">
+                <img 
+                  src={post.image} 
+                  alt={post.title} 
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
               <div className="p-6">
                 <div className="flex items-center text-sm text-foreground/60 mb-3">
                   <span>{post.date}</span>
@@ -74,6 +85,8 @@ const Blog = () => {
                 <p className="text-foreground/70 mb-4">{post.summary}</p>
                 <a 
                   href={post.link} 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center font-medium text-primary hover:text-primary/80 transition-colors"
                 >
                   Read more
