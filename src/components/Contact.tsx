@@ -138,7 +138,7 @@ const Contact = () => {
                 <h4 className="font-medium mb-2">Social Profiles</h4>
                 <div className="flex space-x-4">
                   <a 
-                    href="https://github.com/username" 
+                    href="https://github.com/MohdAnas41" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="bg-gray-100 hover:bg-gray-200 text-foreground p-3 rounded-full transition-colors duration-300"
@@ -147,7 +147,7 @@ const Contact = () => {
                     <Github className="w-5 h-5" />
                   </a>
                   <a 
-                    href="https://linkedin.com/in/username" 
+                    href="https://www.linkedin.com/in/mohdanas2004" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="bg-gray-100 hover:bg-gray-200 text-foreground p-3 rounded-full transition-colors duration-300"
@@ -156,7 +156,7 @@ const Contact = () => {
                     <Linkedin className="w-5 h-5" />
                   </a>
                   <a 
-                    href="mailto:contact@example.com" 
+                    href="mailto:wayanas497@gmail.com" 
                     className="bg-gray-100 hover:bg-gray-200 text-foreground p-3 rounded-full transition-colors duration-300"
                     aria-label="Email"
                   >
@@ -168,10 +168,10 @@ const Contact = () => {
               <div>
                 <h4 className="font-medium mb-2">Email</h4>
                 <a 
-                  href="mailto:contact@example.com" 
+                  href="mailto:wayanas497@gmail.com" 
                   className="text-primary hover:text-primary/80 transition-colors"
                 >
-                  contact@example.com
+                  wayanas497@gmail.com
                 </a>
               </div>
               
