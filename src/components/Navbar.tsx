@@ -1,6 +1,7 @@
 
 import { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
+import { ThemeToggle } from './ThemeToggle';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -39,7 +40,7 @@ const Navbar = () => {
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-lg',
         {
-          'bg-white/80 shadow-sm': scrolled,
+          'bg-background/80 shadow-sm': scrolled,
           'bg-transparent': !scrolled,
         }
       )}
@@ -63,24 +64,28 @@ const Navbar = () => {
             ))}
           </nav>
 
-          {/* Mobile menu button */}
-          <button 
-            className="md:hidden flex items-center"
-            onClick={toggleMobileMenu}
-            aria-label="Toggle mobile menu"
-          >
-            <div className="space-y-2">
-              <span className={cn("block w-8 h-0.5 bg-foreground transition-all duration-300", {
-                "rotate-45 translate-y-1.5": mobileMenuOpen,
-              })}></span>
-              <span className={cn("block w-8 h-0.5 bg-foreground transition-all duration-300", {
-                "opacity-0": mobileMenuOpen,
-              })}></span>
-              <span className={cn("block w-8 h-0.5 bg-foreground transition-all duration-300", {
-                "-rotate-45 -translate-y-1.5": mobileMenuOpen,
-              })}></span>
-            </div>
-          </button>
+          <div className="flex items-center gap-4">
+            <ThemeToggle />
+            
+            {/* Mobile menu button */}
+            <button 
+              className="md:hidden flex items-center"
+              onClick={toggleMobileMenu}
+              aria-label="Toggle mobile menu"
+            >
+              <div className="space-y-2">
+                <span className={cn("block w-8 h-0.5 bg-foreground transition-all duration-300", {
+                  "rotate-45 translate-y-1.5": mobileMenuOpen,
+                })}></span>
+                <span className={cn("block w-8 h-0.5 bg-foreground transition-all duration-300", {
+                  "opacity-0": mobileMenuOpen,
+                })}></span>
+                <span className={cn("block w-8 h-0.5 bg-foreground transition-all duration-300", {
+                  "-rotate-45 -translate-y-1.5": mobileMenuOpen,
+                })}></span>
+              </div>
+            </button>
+          </div>
         </div>
       </div>
 
@@ -88,7 +93,7 @@ const Navbar = () => {
       <div className={cn(
         "md:hidden overflow-hidden transition-all duration-300 ease-in-out",
         {
-          "max-h-screen py-4 bg-white/95": mobileMenuOpen,
+          "max-h-screen py-4 bg-background/95": mobileMenuOpen,
           "max-h-0": !mobileMenuOpen,
         }
       )}>
@@ -103,6 +108,9 @@ const Navbar = () => {
               {item.label}
             </a>
           ))}
+          <div className="py-2">
+            <ThemeToggle />
+          </div>
         </nav>
       </div>
     </header>
