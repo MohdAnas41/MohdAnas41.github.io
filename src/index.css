@@ -17,49 +17,49 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 210 100% 50%;
+    --primary: 221 83% 53%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 252 87% 64%;
+    --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 215 99% 65%;
+    --ring: 221 83% 53%;
 
     --radius: 0.75rem;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 222 47% 11%;
     --foreground: 210 40% 98%;
 
-    --card: 222.2 84% 4.9%;
+    --card: 222 47% 11%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222.2 84% 4.9%;
+    --popover: 222 47% 11%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 100% 50%;
+    --primary: 217 91% 60%;
     --primary-foreground: 222.2 47.4% 11.2%;
 
-    --secondary: 217.2 32.6% 17.5%;
+    --secondary: 217 33% 17%;
     --secondary-foreground: 210 40% 98%;
 
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 250 95% 76%;
+    --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
@@ -96,7 +96,11 @@
   }
 
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-400 dark:from-blue-400 dark:to-blue-300;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600;
+  }
+
+  .text-gradient-dark {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400;
   }
 
   .section {
@@ -120,19 +124,27 @@
   }
 
   .skill-card {
-    @apply bg-white dark:bg-gray-800 shadow-md rounded-xl p-6 hover:shadow-lg transition-shadow duration-300;
+    @apply bg-white/80 dark:bg-gray-800/80 shadow-md rounded-xl p-6 hover:shadow-lg transition-shadow duration-300 border border-gray-100 dark:border-gray-700;
   }
 
   .project-card {
-    @apply bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1;
+    @apply bg-white/90 dark:bg-gray-800/90 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 border border-gray-100 dark:border-gray-700;
   }
 
   .tag {
-    @apply inline-block bg-secondary dark:bg-gray-700 text-sm px-3 py-1 rounded-full font-medium text-primary dark:text-blue-300 m-1;
+    @apply inline-block bg-blue-100 dark:bg-blue-900/40 text-sm px-3 py-1 rounded-full font-medium text-blue-700 dark:text-blue-300 m-1;
   }
 
   .input-field {
     @apply w-full px-4 py-3 bg-background border border-input rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-ring;
+  }
+  
+  .bg-gradient-soft {
+    @apply bg-gradient-to-tr from-blue-50 to-indigo-50 dark:from-gray-900 dark:to-blue-900/20;
+  }
+  
+  .card-highlight {
+    @apply hover:shadow-md hover:shadow-blue-500/10 dark:hover:shadow-blue-400/10 transition-all duration-300;
   }
 }
 
@@ -163,4 +175,12 @@
 .dark .project-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+/* Remove App.css default styles that might interfere with our design */
+#root {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
 }
