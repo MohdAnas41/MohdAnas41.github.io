@@ -12,10 +12,10 @@ const Blog = () => {
       id: 1,
       title: "How I Built My First Machine Learning Model",
       summary: "A step-by-step walkthrough of building my first ML model, from data collection to deployment, with lessons learned along the way.",
-      date: "April 15, 2023",
-      readTime: "8 min read",
+      date: "March 2025",
+      readTime: "3 min read",
       link: "https://medium.com/@wayanas497/how-i-built-my-first-machine-learning-model-predicting-car-purchase-prices-9ebcbd4c6c25",
-      image: "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*vaTUCd-4jVg9RQl52z6WJQ.jpeg"
+      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=6000&q=80"
     },
     {
       id: 2,
