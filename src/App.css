@@ -7,6 +7,28 @@
   text-align: left;
 }
 
+/* Custom dark mode specific styles to ensure content visibility */
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+  color: hsl(var(--foreground));
+}
+
+.dark p, .dark li, .dark span:not(.sr-only) {
+  color: hsl(var(--foreground) / 0.9);
+}
+
+/* Force text color for certain elements that might inherit incorrect colors */
+.dark .text-gray-700 {
+  color: hsl(var(--foreground) / 0.9) !important;
+}
+
+.dark .text-gray-600 {
+  color: hsl(var(--foreground) / 0.8) !important;
+}
+
+.dark .text-gray-500 {
+  color: hsl(var(--foreground) / 0.7) !important;
+}
+
 /* Keep animation for any React logos if present */
 @keyframes logo-spin {
   from {

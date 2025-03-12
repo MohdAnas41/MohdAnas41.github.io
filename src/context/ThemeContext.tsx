@@ -25,6 +25,14 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     root.classList.remove("light", "dark");
     root.classList.add(theme);
     localStorage.setItem("theme", theme);
+    
+    // Force re-render of components that might need it
+    document.querySelectorAll('[data-theme-update]').forEach(el => {
+      el.classList.remove('theme-updated');
+      setTimeout(() => {
+        el.classList.add('theme-updated');
+      }, 10);
+    });
   }, [theme]);
 
   return (
