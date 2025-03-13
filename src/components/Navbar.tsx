@@ -1,13 +1,10 @@
 
 import { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
-import { ThemeToggle } from './ThemeToggle';
-import { useTheme } from '@/context/ThemeContext';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { theme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,20 +40,16 @@ const Navbar = () => {
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
         {
           'bg-background/90 shadow-md backdrop-blur-lg': scrolled,
-          [theme === 'dark' ? 'bg-gradient-to-r from-gray-900/80 to-gray-800/80 backdrop-blur-lg' : 'bg-gradient-to-r from-white/80 to-blue-50/80 backdrop-blur-lg']: !scrolled,
+          'bg-gradient-to-r from-white/80 to-blue-50/80 backdrop-blur-lg': !scrolled,
         }
       )}
     >
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <a href="#home" className={cn(
-              "text-xl font-bold",
-              theme === "dark" ? "text-gradient-dark" : "text-gradient"
-            )}>
+            <a href="#home" className="text-xl font-bold text-gradient">
               Mohd Anas
             </a>
-            <ThemeToggle forceHideBadge={true} />
           </div>
 
           {/* Desktop menu */}
@@ -65,12 +58,7 @@ const Navbar = () => {
               <a
                 key={item.href}
                 href={item.href}
-                className={cn(
-                  "font-medium transition-colors duration-200 underline-animation",
-                  theme === "dark" 
-                    ? "text-gray-300 hover:text-blue-400"
-                    : "text-gray-700 hover:text-blue-600"
-                )}
+                className="font-medium transition-colors duration-200 underline-animation text-gray-700 hover:text-blue-600"
               >
                 {item.label}
               </a>
@@ -113,12 +101,7 @@ const Navbar = () => {
             <a
               key={item.href}
               href={item.href}
-              className={cn(
-                "font-medium py-2 transition-colors duration-200",
-                theme === "dark" 
-                  ? "text-gray-300 hover:text-blue-400"
-                  : "text-gray-700 hover:text-blue-600"
-              )}
+              className="font-medium py-2 transition-colors duration-200 text-gray-700 hover:text-blue-600"
               onClick={() => setMobileMenuOpen(false)}
             >
               {item.label}
